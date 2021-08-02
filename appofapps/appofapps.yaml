@@ -9,7 +9,7 @@ spec:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    repoURL: git@github.com:dennts/gowebservice.git 
+    repoURL: https://github.com/dennts/gowebservice.git 
     path: apps
     targetRevision: HEAD
 
