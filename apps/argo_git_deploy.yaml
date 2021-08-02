@@ -9,5 +9,6 @@ spec:
     namespace: argocd
     server: 'https://kubernetes.default.svc'
   source:
-    repoURL: https://raw.githubusercontent.com/argoproj/argo-cd/v2.1.0-rc1/manifests/install.yaml
+    repoURL: https://github.com/dennts/gowebservice.git
+    path: argocddeploy
     targetRevision: HEAD
