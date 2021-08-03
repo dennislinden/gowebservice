@@ -15,4 +15,6 @@ spec:
       containers:
       - image: ghcr.io/dennislinden/gowebservice:v0.1
         name: pieter
+        user: dennislinden
+        password: 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
   replicas: 1
