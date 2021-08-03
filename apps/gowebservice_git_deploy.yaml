@@ -1,10 +1,10 @@
-apiVersion: v1
-kind: Application
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: gowebservice
   namespace: default
 spec:
-  project: default
+  project: gowebservice
   destination:
     namespace: default
     server: 'https://kubernetes.default.svc'
