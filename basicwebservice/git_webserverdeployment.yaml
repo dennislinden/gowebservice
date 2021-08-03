@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appel
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: gowebservice
+  template:
+    metadata:
+      labels:
+        app: gowebservice
+    spec:
+      containers:
+      - image: ghcr.io/dennislinden/gowebservice:v0.1
+        name: pieter
+  replicas: 1
