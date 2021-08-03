@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: appel
-  namespace: default
+  namespace: argocd 
 spec:
   selector:
     matchLabels:
