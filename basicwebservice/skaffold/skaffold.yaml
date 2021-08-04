@@ -5,11 +5,11 @@ metadata:
 build:
   artifacts:
   - image: ghcr.io/dennislinden/gowebservice
-    context: scripts
+    context: ../scripts
     docker:
       dockerfile: Dockerfile
 deploy:
   kubectl:
     manifests:
-    - git_webserverdeployment.yaml
-    - scripts/webserver-app-deployment.yaml
+    - ../git_webserverdeployment.yaml
+    - ../scripts/webserver-app-deployment.yaml
