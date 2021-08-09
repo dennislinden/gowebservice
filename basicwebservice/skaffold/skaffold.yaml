@@ -5,11 +5,16 @@ metadata:
 build:
   artifacts:
   - image: ghcr.io/dennislinden/gowebservice
-    context: ../scripts
+    context: ../code
     docker:
       dockerfile: Dockerfile
 deploy:
   kubectl:
     manifests:
     - ../git_webserverdeployment.yaml
-    - ../scripts/webserver-app-deployment.yaml
+    - ../code/webserver-app-deployment.yaml
+portForward:
+  - resourceType: deployment
+    resourceName: appel
+    port: 8080
+    localPort: 8082

@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: marianne
+  namespace: default 
+spec:
+  selector:
+    matchLabels:
+      app: mariadb
+  template:
+    metadata:
+      labels:
+        app: mariadb 
+    spec:
+      containers:
+      - image: mariadb:10.6.3-focal
+        name: marian
+  replicas: 1

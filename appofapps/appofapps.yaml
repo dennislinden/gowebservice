@@ -12,4 +12,3 @@ spec:
     repoURL: https://github.com/dennts/gowebservice.git 
     path: apps
     targetRevision: HEAD
-
