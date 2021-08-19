@@ -1,0 +1,20 @@
+apiVersion: skaffold/v2beta19
+kind: Config
+metadata:
+  name: webservice
+build:
+  artifacts:
+  - image: ghcr.io/dennislinden/webservice
+    context: ../code
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kubectl:
+    manifests:
+    - ../git_webserverdeployment.yaml
+    - ../code/webserver-app-deployment.yaml
+portForward:
+  - resourceType: deployment
+    resourceName: webservice
+    port: 8080
+    localPort: 8082
